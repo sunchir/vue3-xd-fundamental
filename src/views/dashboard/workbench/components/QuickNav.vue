@@ -4,7 +4,7 @@
       <CardGrid>
         <span class="flex flex-col items-center">
           <Icon :icon="item.icon" :color="item.color" size="20" />
-          <span class="text-md mt-2">{{ item.title }}</span>
+          <span class="mt-2 text-md">{{ item.title }}</span>
         </span>
       </CardGrid>
     </template>

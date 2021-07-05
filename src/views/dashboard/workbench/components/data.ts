@@ -53,6 +53,19 @@ export const navItems: NavItem[] = [
   },
 ];
 
+export const tabList = [
+  {
+    key: 'notice',
+    tabText: '任务',
+    slots: { tab: 'noticeRender' },
+  },
+  {
+    key: 'task',
+    tabText: '任务',
+    slots: { tab: 'taskRender' },
+  },
+];
+
 export const dynamicInfoItems: DynamicInfoItem[] = [
   {
     avatar: 'dynamic-avatar-1|svg',

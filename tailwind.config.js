@@ -18,7 +18,7 @@ module.exports = {
       ...colors,
       sky: color_sky,
       primary: {
-        DEFAULT: '#0960bd',
+        DEFAULT: '#396afc',
         // dark: primaryColorDark,
       },
     },

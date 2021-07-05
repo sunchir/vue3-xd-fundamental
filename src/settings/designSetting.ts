@@ -1,11 +1,12 @@
 import { ThemeEnum } from '../enums/appEnum';
 
-export const prefixCls = 'vben';
+export const prefixCls = 'xd';
 
 export const darkMode = ThemeEnum.LIGHT;
 
 // app theme preset color
 export const APP_PRESET_COLOR_LIST: string[] = [
+  '#396AFC',
   '#0960bd',
   '#0084f4',
   '#009688',

@@ -1,35 +1,64 @@
 <template>
-  <Card title="项目" v-bind="$attrs">
-    <template #extra>
-      <a-button type="link" size="small">更多</a-button>
-    </template>
-
-    <template v-for="item in items" :key="item">
-      <CardGrid class="md:!w-1/3 !w-full">
-        <span class="flex">
-          <Icon :icon="item.icon" :color="item.color" size="30" />
-          <span class="text-lg ml-4">{{ item.title }}</span>
-        </span>
-        <div class="flex mt-2 h-10 text-secondary"> {{ item.desc }} </div>
-        <div class="flex justify-between text-secondary">
-          <span>{{ item.group }}</span>
-          <span>{{ item.date }}</span>
-        </div>
-      </CardGrid>
-    </template>
+  <Card :bodyStyle="{ padding: 0 }" class="w-full carousel" v-bind="$attrs">
+    <Carousel class="w-full" autoplay>
+      <div>
+        <h3 class="truncate max-width-text">
+          教务处张彪报专用设备购置电子工程学院购买了很多东西需要看看哦
+        </h3>
+      </div>
+      <div>
+        <h3 class="truncate max-width-text">
+          教务处张一报专用设备购置电子工程学院购买了很多东西需要看看哦
+        </h3>
+      </div>
+    </Carousel>
   </Card>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue';
-
-  import { Card } from 'ant-design-vue';
-  import { Icon } from '/@/components/Icon';
+  import { Card, Carousel } from 'ant-design-vue';
   import { groupItems } from './data';
 
   export default defineComponent({
-    components: { Card, CardGrid: Card.Grid, Icon },
+    components: { Card, Carousel: Carousel },
     setup() {
       return { items: groupItems };
     },
   });
 </script>
+
+<style scoped>
+  /* For demo */
+  .ant-carousel >>> .slick-slide {
+    text-align: center;
+    height: 200px;
+    line-height: 170px;
+    background: #6963ff;
+    overflow: hidden;
+  }
+
+  .ant-carousel >>> .slick-dots {
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .ant-carousel >>> .slick-dots button {
+    border-radius: 50%;
+    width: 0.4rem !important;
+    height: 0.4rem !important;
+  }
+
+  .ant-carousel >>> .slick-slide h3 {
+    color: #fff;
+  }
+
+  .ant-card {
+    border-radius: 1.2rem;
+  }
+
+  .max-width-text {
+    max-width: 70%;
+    margin-left: 1rem;
+    transform: translateY(47%);
+  }
+</style>

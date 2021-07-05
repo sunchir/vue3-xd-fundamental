@@ -7,7 +7,7 @@
 
       <a @click="openWindow(DOC_URL)">{{ t('layout.footer.onlineDocument') }}</a>
     </div>
-    <div>Copyright &copy;2020 Vben Admin</div>
+    <div>Copyright &copy;2021 寻道科技</div>
   </Footer>
 </template>
 

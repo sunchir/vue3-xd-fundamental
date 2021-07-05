@@ -1,14 +1,12 @@
 <template>
   <PageWrapper>
-    <template #headerContent> <WorkbenchHeader /> </template>
     <div class="lg:flex">
-      <div class="lg:w-7/10 w-full !mr-4 enter-y">
+      <div class="left-content !mr-4 enter-y">
         <ProjectCard :loading="loading" class="enter-y" />
         <DynamicInfo :loading="loading" class="!my-4 enter-y" />
       </div>
-      <div class="lg:w-3/10 w-full enter-y">
-        <QuickNav :loading="loading" class="enter-y" />
-
+      <div class="right-content enter-y">
+        <CalendarTask :loading="loading" class="enter-y" />
         <Card class="!my-4 enter-y" :loading="loading">
           <img
             style="height: 216px"
@@ -27,21 +25,19 @@
 
   import { Card } from 'ant-design-vue';
   import { PageWrapper } from '/@/components/Page';
-  import WorkbenchHeader from './components/WorkbenchHeader.vue';
   import ProjectCard from './components/ProjectCard.vue';
-  import QuickNav from './components/QuickNav.vue';
   import DynamicInfo from './components/DynamicInfo.vue';
   import SaleRadar from './components/SaleRadar.vue';
+  import CalendarTask from './components/CalendarTask.vue';
 
   export default defineComponent({
     components: {
       PageWrapper,
-      WorkbenchHeader,
       ProjectCard,
-      QuickNav,
       DynamicInfo,
       SaleRadar,
       Card,
+      CalendarTask,
     },
     setup() {
       const loading = ref(true);
@@ -56,3 +52,17 @@
     },
   });
 </script>
+<style lang="less" scoped>
+  .left-content {
+    width: 35%;
+  }
+
+  .ant-card {
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+
+  .right-content {
+    width: 65%;
+  }
+</style>
