@@ -20,6 +20,167 @@ interface DynamicInfoItem {
   desc: string;
 }
 
+interface GroupTitleItems {
+  appNum?: number;
+  id: number;
+  isInit?: number;
+  name: String;
+  parentId?: number;
+}
+
+interface AppList {
+  appId: string;
+  appSecret: string;
+  appUrl?: string;
+  categoryId?: number;
+  description: string;
+  h5Url?: string;
+  icon?: string;
+  id: number;
+  isInit?: number;
+  maintenanceUrl?: string;
+  name: string;
+  orgName?: string;
+  orgSn?: string;
+  sort?: number;
+  thirdApp?: number;
+  type?: string;
+}
+
+export const groupTitleItems: GroupTitleItems[] = [
+  {
+    appNum: 1,
+    id: 12,
+    isInit: 0,
+    name: '评价中心',
+    parentId: undefined,
+  },
+  {
+    appNum: 4,
+    id: 4,
+    isInit: 0,
+    name: '数据看板',
+    parentId: undefined,
+  },
+  {
+    appNum: 3,
+    id: 10,
+    isInit: 0,
+    name: '学生管理',
+    parentId: undefined,
+  },
+  {
+    appNum: 8,
+    id: 1,
+    isInit: 0,
+    name: '基础系统',
+    parentId: undefined,
+  },
+  {
+    appNum: 6,
+    id: 3,
+    isInit: 0,
+    name: '奖助勤贷',
+    parentId: undefined,
+  },
+  {
+    appNum: 3,
+    id: 10,
+    isInit: 0,
+    name: '学生管理',
+    parentId: undefined,
+  },
+  {
+    appNum: 8,
+    id: 1,
+    isInit: 0,
+    name: '基础系统',
+    parentId: undefined,
+  },
+  {
+    appNum: 6,
+    id: 3,
+    isInit: 0,
+    name: '奖助勤贷',
+    parentId: undefined,
+  },
+];
+
+export const appList: AppList[] = [
+  {
+    appId: '345fgdg3232',
+    appSecret: 'b547jj56uufhh56y43',
+    appUrl: 'https://jzsz.uestc.edu.cn/instructor/',
+    categoryId: 4,
+    description: '辅导员数据看板',
+    h5Url: undefined,
+    icon: 'group1/M00/02/57/wKgLB2BtXLyAXQc1AAAWBkldMYk479.png',
+    id: 65,
+    isInit: 0,
+    maintenanceUrl: 'https://jzsz.uestc.edu.cn/instructor/#/board',
+    name: '辅导员数据看板',
+    orgName: '电子科技大学',
+    orgSn: 'h001',
+    sort: 44,
+    thirdApp: 1,
+    type: undefined,
+  },
+  {
+    appId: '345fgsg3232',
+    appSecret: 'b547jj5suufhh56y43',
+    appUrl: 'https://jzsz.uestc.edu.cn/vacation/',
+    categoryId: 4,
+    description: '请销假数据看板',
+    h5Url: undefined,
+    icon: 'group1/M00/02/57/wKgLB2BtXMqAfgR2AAAR9NHsiDI576.png',
+    id: 66,
+    isInit: 0,
+    maintenanceUrl: 'https://jzsz.uestc.edu.cn/vacation/#/board',
+    name: '请销假数据看板',
+    orgName: '电子科技大学',
+    orgSn: 'h001',
+    sort: 44,
+    thirdApp: 1,
+    type: undefined,
+  },
+  {
+    appId: '3453dsfs',
+    appSecret: 'asdf436dg5y76u88j',
+    appUrl: 'https://jzsz.uestc.edu.cn/platform/',
+    categoryId: 4,
+    description: '智慧学工数据看板',
+    h5Url: undefined,
+    icon: 'group1/M00/02/5C/wKgLB2CaJDGAEcKnAAATo-jvCXY121.png',
+    id: 69,
+    isInit: 0,
+    maintenanceUrl: 'https://jzsz.uestc.edu.cn/platform/',
+    name: '平台数据看板',
+    orgName: '电子科技大学',
+    orgSn: 'h001',
+    sort: 44,
+    thirdApp: 1,
+    type: undefined,
+  },
+  {
+    appId: '345rddsfs',
+    appSecret: 's34552dgd4g',
+    appUrl: 'https://jzsz.uestc.edu.cn/studatav/',
+    categoryId: 4,
+    description: '学生数据看板',
+    h5Url: undefined,
+    icon: 'group1/M00/02/5F/wKgLB2C_PiqANUW9AAASGMAH58s300.png',
+    id: 71,
+    isInit: 0,
+    maintenanceUrl: 'https://jzsz.uestc.edu.cn/studatav/',
+    name: '学生数据看板',
+    orgName: '电子科技大学',
+    orgSn: 'h001',
+    sort: 44,
+    thirdApp: 1,
+    type: undefined,
+  },
+];
+
 export const navItems: NavItem[] = [
   {
     title: '首页',
